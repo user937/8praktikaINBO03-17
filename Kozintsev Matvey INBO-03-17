@@ -1,0 +1,30 @@
+#include <stdio.h> // Для printf, получает
+#include <iostream>
+#include <conio.h>
+#include <fstream.h>
+
+int main (void)
+{    
+   // Массив, в который помещается считываемая строка
+   char masstr ​​[100] = "";
+      
+   // Указатель, в который будет помещен результат работы функции получает
+   char * rstr;
+
+   setlocale (0, "rus");
+   
+   // Запрос ввода строки
+   printf ("Введите строку: \ n");
+
+   // Чтение строки из стандартного потока ввода
+   rstr = получает (masstr);
+
+   ofstream a ("text_file.txt");
+   a << rstr;
+   близкий();
+
+   // Вывод результата работы
+   printf ("Считана строка: \ n% s \ n", masstr);
+
+   return 0;
+}
